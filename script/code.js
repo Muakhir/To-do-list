@@ -26,10 +26,10 @@ function submitTask() {
         }
     }
 function sortTasks(order) {
-    if (order === 'asc') {
+    if (order == 'asc') {
             tasks.sort()
         } 
-    else if (order === 'desc') {
+    else if (order == 'desc') {
             tasks.sort().reverse()
         }
         renderTasks()
@@ -40,7 +40,7 @@ function renderTasks() {
     if (taskList) {
             taskList.innerHTML = ''
 
-    for (let i = 0; i < tasks.length; i++) {
+    for (let i = 1; i < tasks.length; i++) {
             let listItem = document.createElement('li')
                 listItem.textContent = tasks[i]
                 taskList.appendChild(listItem)
