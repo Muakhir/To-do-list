@@ -14,6 +14,19 @@ function capitalizeFirstLetter() {
             inputElement.value = capitalizedText;
         }
     }
+function submitTask() {
+    let task = inputElement.value
+    if (task.trim() !== '') {
+        let listItem = document.createElement('li')
+            listItem.textContent = task
+        let taskList = document.getElementById('taskList');
+        if (taskList) {
+                taskList.appendChild(listItem);
+            }
+            inputElement.value = '';
+        }
+    }
+    
 
 function sortTasks() {
 
