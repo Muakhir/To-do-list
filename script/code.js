@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let inputElement = document.querySelector('[data-entry]')
 let submitButton = document.querySelector('[data-submit]')
 let sortButton = document.querySelector('[data-sort]')
-let tasks = [""]
+let tasks = []
 
     inputElement.addEventListener('input', capitalizeFirstLetter)
     submitButton.addEventListener('click', submitTask)
@@ -25,11 +25,11 @@ function submitTask() {
             inputElement.value = ''
         }
     }
-function sortTasks(order) {
-    if (order == 'asc') {
+function sortTasks(taskList) {
+    if (taskList == 'asc') {
             tasks.sort()
         } 
-    else if (order == 'desc') {
+    else if (taskList == 'desc') {
             tasks.sort().reverse()
         }
         renderTasks()
